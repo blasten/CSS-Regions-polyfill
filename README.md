@@ -12,7 +12,7 @@ reg.split();
 Dynamic regions
 =========
 ```javascript
-  var reg = new Regions(document.getElementById('article));
+  var reg = new Regions(document.getElementById('article'));
 
     reg.requestNewRegion = function() {
       var region = document.createElement('div');
