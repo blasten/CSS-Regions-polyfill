@@ -1,5 +1,13 @@
-CSS3 Region polyfill
-=======
+# CSS3 Region polyfill
+
+This polyfill makes CSS3 Regions cross-browser and cross-platform. It uses binary search to find the position of the words, which makes it run really fast.
+
+### About CSS Regions
+
+CSS regions allow content to flow across multiple areas called regions. These regions are not necessarily contiguous in the document order.
+
+
+### Basic setup
 
 ```javascript
 var reg = new Regions(document.getElementById('article'));
@@ -9,8 +17,16 @@ reg.flowTo(document.getElementById('part_4'));
 reg.split();
 ```
 
-Dynamic regions
-=========
+### Chaining
+
+```javascript
+(new Regions(document.getElementById('article'))).
+  flowTo(document.getElementById('part_2')).
+  split();
+```
+
+### Events
+
 ```javascript
   var reg = new Regions(document.getElementById('article'));
 
@@ -31,15 +47,14 @@ Dynamic regions
   }
 ```
 
-Using jQuery
-=========
+### jQuery build-in plugin
+
 ```javascript
 $('.article').region('flowTo', $('.article_part'));
 ```
 
+### Checking native support for CSS3 Regions
 
-Checking native support for CSS3 Regions
-=========
 ```javascript
 if (!Regions.nativeSupport()) {
   $('.article').region('flowTo', $('.article_part'));
