@@ -38,7 +38,7 @@ $('.article').region('flowTo', $('.article_part'));
 ```
 
 
-Checking native support of CSS3 Regions
+Checking native support for CSS3 Regions
 =========
 ```javascript
 if (!Regions.nativeSupport()) {
