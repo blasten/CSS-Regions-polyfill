@@ -1,4 +1,4 @@
-# CSS3 Region polyfill
+# Partial polyfill for Regions
 
 This polyfill makes CSS3 Regions cross-browser and cross-platform. It uses binary search to find the position of the words, which makes it run really fast.
 
